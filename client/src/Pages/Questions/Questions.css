@@ -1,0 +1,133 @@
+.quizItem {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.counter {
+  width: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #61dafb;
+}
+.questions {
+  width: 570px;
+  height: 65px;
+  background: linear-gradient(rgb(62, 66, 65), rgb(34, 36, 35));
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.counterNumber {
+  width: 300px;
+  height: 65px;
+  border-radius: 15px;
+  background: linear-gradient(rgb(62, 66, 65), rgb(34, 36, 35));
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 37px;
+}
+.questionsTitle {
+  text-transform: capitalize;
+  font-weight: 500;
+  color: #61dafb;
+}
+
+.counterScore {
+  width: 150px;
+  height: 65px;
+  border-radius: 15px;
+  background: linear-gradient(rgb(62, 66, 65), rgb(34, 36, 35));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 37px;
+  margin-bottom: 15px;
+}
+.answerQuiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quizAnsCont {
+  width: 700px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.quizBtn {
+  width: 250px;
+  height: 65px;
+  margin: 15px 0;
+  background: linear-gradient(rgb(87, 97, 94), rgb(55, 61, 59));
+  text-align: center;
+  border-radius: 15px;
+  text-transform: capitalize;
+  color: #000;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+
+.quizBtn:hover,
+.quizBtn.active {
+  background: linear-gradient(#3d616d, #5496ac);
+}
+
+/*right answer*/
+
+.quizBtn.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: #61dafb;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#3d616d, #5496ac);
+  }
+  62%,
+  100% {
+    background: green;
+  }
+}
+
+/*wrong answer*/
+
+.quizBtn.wrong {
+    animation: wrong 3s ease forwards;
+  }
+  
+  @keyframes wrong {
+    0%,
+    22%,
+    42% {
+      background: #61dafb;
+    }
+    20%,
+    40%,
+    60% {
+      background: linear-gradient(#3d616d, #5496ac);
+    }
+    62%,
+    100% {
+      background: crimson;
+    }
+  }
+  
